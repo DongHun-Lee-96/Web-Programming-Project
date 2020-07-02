@@ -1,22 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<%
-	int num = 0;
-	String num_ = request.getParameter("n");
-	
-	if(num_!= null && !num_.equals("")){
-		num = Integer.parseInt(num_);
-	}
-	
-	String result;
-	
-	if(num%2!=0){
-		result = "odd";
-	} else {	 
-		result = "even";
-	}  
-%>
 
 <!-- ------------------------------------------>	
 <!DOCTYPE html>
@@ -26,6 +9,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%=result %> number.
+	<%=request.getAttribute("result") %> number.
 </body>
 </html>
